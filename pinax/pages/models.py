@@ -20,7 +20,7 @@ class Page(models.Model):
     )
 
     title = models.CharField(max_length=100)
-    path = models.CharField(max_length=100, unique=True)
+    path = models.CharField(max_length=100, unique=False)
     body = models.TextField()
     body_html = models.TextField(blank=True, editable=False)
     status = models.IntegerField(choices=STATUS_CHOICES, default=2)
